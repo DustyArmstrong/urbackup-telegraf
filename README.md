@@ -11,4 +11,4 @@ for device in usage:
   tgClient.metric('Urbackup Usage', device['used'], tags={'Endpoint': device['name']})
 ```
 
-Run this script on the same host as Telegraf (I am using Docker personally), ensure you have the relevant ports listening. Script can be run with Cron on a regular basis `crontab -e`. 
+Run this script on the same host as Telegraf (I am using Docker personally), ensure you have the relevant ports listening (UDP 8092). Script can be run with Cron on a regular basis `crontab -e`. 
